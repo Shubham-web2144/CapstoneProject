@@ -1,0 +1,21 @@
+<!-- Employee Details page -->
+
+<h1>Employee Details</h1>
+<div class="employeeDetails__box">
+  <ul>
+    <li>Employee ID : <span id="id">{{ employee.id }}</span></li>
+    <li>
+      Employee Name : <span id="name">{{ employee.name }}</span>
+    </li>
+    <li>
+      Employee Location : <span id="location" >{{ employee.location }}</span>
+    </li>
+    <li>
+      Employee Email : <span id="email">{{ employee.email }}</span>
+    </li>
+    <li>
+      Employee Mobile : <span id="mobile">{{ employee.mobile }}</span>
+    </li>
+  </ul>
+  <button (click)="visitLastPage()" id="back">Back</button>
+</div>

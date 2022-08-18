@@ -1,0 +1,80 @@
+.employeeList {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+} 
+.employeeList__filter {
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+    width: calc(100% - 500px);
+}
+.employeeList__filter label {
+    font-size: 19px;
+    font-weight: 600;
+    color: rgb(19, 77, 184);
+    text-shadow: 3px 2px 6px rgba(0,0,0,0.3);
+    letter-spacing: 0.8px;
+}
+.employeeList__filter input {
+    width: 300px;
+    margin: 8px 0px;
+    height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 4px;
+}
+.employeeList__totalEmp {
+    margin-left: 100px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgb(19, 77, 184);
+}
+.employeeList__table {
+    width: calc(100% - 400px);
+    margin-left: 100px;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: center;
+    border-color: rgb(25, 9, 239);
+    border-radius: 6px;
+}
+.employeeList__table tr th {
+    background-color: rgba(19, 77, 184, 0.92);
+    padding: 10px 0px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.employeeList__table tr td {
+    padding: 6px 0px;
+}
+
+.employeeList__table tr:nth-child(odd) {
+    background-color: rgba(19, 77, 184, 0.646);
+}
+.employeeList__table tr td a {
+    color: black;
+    text-decoration: none;
+}
+.editBtn  {
+    font-weight: 700;
+    color: rgb(3, 3, 122) !important;
+}
+
+.deleteBtn {
+    padding: 7px 8px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    background-color: red;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}

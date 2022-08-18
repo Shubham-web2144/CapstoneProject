@@ -1,0 +1,58 @@
+<!-- Edit employee details page -->
+
+<h1>Edit Employee Details</h1>
+<form name="editFrm" [formGroup]="editForm" (ngSubmit)="onUpdate(editForm)">
+  <div class="inputBox">
+    <label for="">Emplaoyee Name</label>
+    <input
+      type="text"
+      name="name"
+      formControlName="name"
+      placeholder="name"
+      value="{{ editForm.value.name }}"
+      id="name"
+    />
+    <p *ngIf="f['name'].touched && f['name'].invalid && !f['name'].value">Required*</p>
+  </div>
+  <div class="inputBox">
+    <label for="">Employee Location</label>
+    <select
+      name="location"
+      formControlName="location"
+      value="{{ editForm.value.location }}"
+      id="location"
+    >
+      <option value="Pune">Pune</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Banglore">Banglore</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+    <p *ngIf="f['location'].touched && f['location'].invalid && !f['location'].value">Required*</p>
+  </div>
+  <div class="inputBox">
+    <label for="">Employee Email</label>
+    <input
+      type="text"
+      name="email"
+      formControlName="email"
+      placeholder="mail"
+      value="{{ editForm.value.email }}"
+      id="email"
+    />
+    <p *ngIf="f['email'].touched && f['email'].invalid && !f['email'].value">Required*</p>
+    <p *ngIf="f['email'].touched && f['email'].errors">Enter correct email format</p>
+  </div>
+  <div class="inputBox">
+    <label for="">Employee Number</label>
+    <input
+      type="text"
+      name="mobile"
+      formControlName="mobile"
+      placeholder="mobile"
+      value="{{ editForm.value.mobile }}"
+      id="mobile"
+    />
+    <p *ngIf="f['mobile'].touched && f['mobile'].invalid && !f['mobile'].value">Required*</p>
+  </div>
+  <button class="btn" id="update" type="submit" [disabled]="!editForm.valid" >Update</button>
+</form>

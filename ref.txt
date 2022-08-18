@@ -1,0 +1,83 @@
+main page*
+    employeeList*
+        edit-
+          editEmployeePage
+            update-btn
+                employeeList page with updated list 
+        empId-click
+            employeeDetails page*
+                back-btn*
+                    employeeList page
+        delete-btn*
+            delete employee and employeeDetails with updated
+        filter input*
+            input-event
+                refresh the employeeList  
+    addEmployee*
+        submit-btn
+            employeeList page with updated
+
+
+==> MVC Pattern
+
+
+employeeList structur
+    -> filter
+    -> total number of empI
+    -> emp table
+        -> name
+        -> empId
+        -> location
+        -> email
+        -> mobile
+        -> edit link
+        -> delete btn
+
+addEmployee structur
+    -> emp name
+    -> location -option
+    -> email
+    -> mobile
+    -> btn submit
+    **limit 30 char
+
+editEmployeePage structur
+    -> emp name
+    -> location -option
+    -> email
+    -> mobile
+    -> btn update
+
+employeeDetails structur
+    -> title 
+        ID: 
+        Name: 
+        Location: 
+        Email: 
+        Mobile: 
+    -> back btn
+
+default emp
+const employees = [
+      {
+        id:1,
+        name:"Ram",
+        location: "Banglore",
+        email:"ram@mail.com",
+        mobile: "9867512345"
+    },
+    {
+        id:2,
+        name:"Raj",
+        location: "Chennai",
+        email: "raj@mail.com",
+        mobile: "9867512345"
+    },
+    {
+        id:3,
+        name:"Vinay",
+        location: "Pune",
+        email: "vinay@mail.com",
+        mobile: "9867512345"
+    }
+    ];

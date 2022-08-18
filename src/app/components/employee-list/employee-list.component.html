@@ -1,0 +1,40 @@
+<!-- Employee List page -->
+
+<div class="employeeList">
+    <div class="employeeList__filter">
+        <label for="">Filter By :  </label>
+        <!-- // search filter for ng-serach-filter inbuilt search angular -->
+        <input type="text" id="filter" [(ngModel)]="srchTxt" />
+    </div>
+    <p class="employeeList__totalEmp" id="count" > Total number of employees : {{ totalEmployees  }}</p>
+    <table class="employeeList__table" border="1" >
+        <tr>
+            <th>Emp ID</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <!-- getting all employees and display -->
+        <tr *ngFor="let emp of employees | filter : srchTxt; let i = index" >
+            <td>
+                <a [routerLink]="['/employee', emp.id]" >{{ emp.id }}</a>
+            </td>
+            <td id="name{{i+1}}"> {{ emp.name }} </td>
+            <td id="loc{{i+1}}">{{ emp.location }}</td>
+            <td id="email{{i+1}}"> {{ emp.email }} </td>
+            <td id="mob{{i+1}}"> {{ emp.mobile }}</td>
+            <td>
+                <!-- edit page link -->
+                <a class="editBtn" [routerLink]="['/editEmployee', emp.id]">Edit</a>
+            </td>
+            <td>
+                <!-- delete btn -->
+                <button class="deleteBtn" (click)="deleteEmployee(emp.id)">Delete</button>
+            </td>
+        </tr>
+    </table>
+</div>
+

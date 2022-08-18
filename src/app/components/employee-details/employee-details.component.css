@@ -1,0 +1,40 @@
+
+h1 {
+    position: relative;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 30px;
+    color: rgb(25, 9, 239);
+    text-shadow: 3px 4px 6px rgba(0,0,0,0.3);
+}
+.employeeDetails__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.employeeDetails__box ul {
+    list-style: none;
+}
+.employeeDetails__box ul li {
+    margin: 8px 0px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.749);
+    font-size: 17px;
+}
+.employeeDetails__box ul li span {
+    margin-left: 8px !important;
+    color: rgba(0, 0, 0, 0.879);
+}
+.employeeDetails__box button {
+    width: 150px;
+    height: 30px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(14, 175, 49, 0.897);
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}

@@ -1,0 +1,63 @@
+<!-- Add new employee page -->
+
+<h1>Add New Employee</h1>
+
+<form
+  name="addEmployeeForm"
+  [formGroup]="employeeForm"
+  (ngSubmit)="addEmployee(employeeForm)"
+>
+  <div class="addFormInputBox">
+    <label for="">Employee Name</label>
+    <input
+      type="text"
+      name="name"
+      id="name"
+      formControlName="name"
+      placeholder="Enter name"
+    />
+    <p *ngIf="f['name'].touched && f['name'].invalid && !f['name'].value">Required*</p>
+  </div>
+
+  <div class="addFormInputBox">
+    <label for="">Employee Location</label>
+    <select
+      name="location"
+      formControlName="location"
+      placeholder="Select location"
+      id="location"
+    >
+      <option value="Pune">Pune</option>
+      <option value="Hyderabad">Hyderabad</option>
+      <option value="Banglore">Banglore</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+    <p *ngIf="f['location'].touched && f['location'].invalid && !f['location'].value">Required*</p>
+  </div>
+
+  <div class="addFormInputBox">
+    <label for="">Employee Email</label>
+    <input
+      type="text"
+      name="email"
+      formControlName="email"
+      placeholder="Enter email"
+      id="email"
+    />
+    <p *ngIf="f['email'].touched && f['email'].invalid && !f['email'].value">Required*</p>
+    <p *ngIf="f['email'].touched && f['email'].errors">Enter correct email format</p>
+  </div>
+
+  <div class="addFormInputBox">
+    <label for="">Employee Number</label>
+    <input
+      type="text"
+      name="mobile"
+      formControlName="mobile"
+      placeholder="enter mobile"
+      id="mobile"
+    />
+    <p *ngIf="f['mobile'].touched && f['mobile'].invalid && !f['mobile'].value">Required*</p>
+  </div>
+    <button class="btn" id="add" type="submit" [disabled]="!employeeForm.valid" >Submit</button>
+</form>
